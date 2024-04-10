@@ -69,3 +69,27 @@ In this chapter, you will:
 - Understand Domain 1.0: Data Concepts and Environments
 - Compare and contrast different data types
 - Compare and contrast common data structures and file formats
+
+- ---
+
+Chapter 2 
+
+In this chapter, you will:
+
+- Understand Domain 1.0: Data Concepts and Environments
+- Compare and contrast different data types
+- Compare and contrast common data structures and file formats
+
+Data elements and data types in Data Science 
+
+- A **data element** is an attribute about a person, place, or thing containing data within a range of values.
+- A **data type** limits the values a data element can have.
+
+Structured data is tabular in nature and organized into rows and columns.
+
+**Alphanumeric** is the most widely used data type for storing character-based data.  alphanumeric is appropriate when a data element consists of both numbers and letters. An example is with an Address both the letter and numbers are required. 
+
+- Alphanumeric data type is ideal for storing product stock-keeping units (SKUs). Common in the retail clothing space to have a unique SKU for each item available for sale.
+- If you sell jeans, you may stock products from Armani Jeans, Diesel, Lee Jeans, Levi's, and Wrangler. To keep track of all the manufacturer, size, color, and fit combinations in your inventory, you might use an SKU
+
+**Character Sets**
