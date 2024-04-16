@@ -173,3 +173,43 @@ Before it was common to use delimited files with variable-length columns, flat f
 ***HyperText Markup Language (HTML)***
 
 HyperText Markup Language (HTML) is a markup language for documents designed to be displayed in a web browser.
+
+
+
+
+---
+
+16/04/2024
+
+**Databases and Data Acquisition**
+
+Databases make it easy to summarize a lot of data. 
+
+- Example: For example, a financial analyst wants to understand why some retail outlets are more profitable than others. The analyst might look at the individual records for each store, but that's difficult to do if there are thousands of items and hundreds of stores. Answering the business questions here requires summarizing the data for each store.
+
+# Relational vs Nonrelational
+
+### Relational Database
+
+- The oldest and most mature databases is the relational database.  Relational databases excel at storing and processing structured data. Tabular data is highly structured.
+- Entity Relationship Diagram:  ER diagrams **provide a graphical interface for designing databases**.
+- The power of the relational model is that it also allows us to describe how entities connect or relate, to each other.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/47b3cc62-54bf-42ab-91cc-f690560c675b/1c924693-2ec9-41ae-b4a1-6a464f414471/Untitled.png)
+
+Unary - A unary relationship is when an entity has a connection with itself.  
+
+- A binary relationship connects two entities
+- A ternary relationship connects three entities. For example, you might use a ticket entity to connect a venue, a performing artist, and a price.
+
+Binary relationships are the most common and easy to explore, whereas unary and ternary are comparatively complex and rare.
+
+ERD 
+
+- Entity relationship diagram also serves as a relational database's blueprint.
+- Ability to read ERDs helps you understand the structure of a relational database.
+- Useful when formulating how to retrieve information from the database that is spread across multiple tables
+
+## Relational Databases
+
+— Are pieces of software that let you make an operational system out of an ERD.
