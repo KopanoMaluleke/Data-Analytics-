@@ -213,3 +213,222 @@ ERD
 ## Relational Databases
 
 — Are pieces of software that let you make an operational system out of an ERD.
+
+
+# Relational vs Nonrelational
+
+---
+
+19/04/2024
+
+### Relational Database
+
+- The oldest and most mature databases is the relational database.  Relational databases excel at storing and processing structured data. Tabular data is highly structured.
+- Entity Relationship Diagram:  ER diagrams **provide a graphical interface for designing databases**.
+- The power of the relational model is that it also allows us to describe how entities connect or relate, to each other.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/47b3cc62-54bf-42ab-91cc-f690560c675b/1c924693-2ec9-41ae-b4a1-6a464f414471/Untitled.png)
+
+Unary - A unary relationship is when an entity has a connection with itself.  
+
+- A binary relationship connects two entities
+- A ternary relationship connects three entities. For example, you might use a ticket entity to connect a venue, a performing artist, and a price.
+
+Binary relationships are the most common and easy to explore, whereas unary and ternary are comparatively complex and rare.
+
+ERD 
+
+- Entity relationship diagram also serves as a relational database's blueprint.
+- Ability to read ERDs helps you understand the structure of a relational database.
+- Useful when formulating how to retrieve information from the database that is spread across multiple tables
+
+## Relational Databases
+
+— Are pieces of software that let you make an operational system out of an ERD. 
+
+---
+
+## Nonrelational Databases
+
+- A nonrelational database does not have a predefined structure based on tabular data. Data validation happens in code, as opposed to being done in the database.
+
+Examples of nonrelational databases include 
+
+- key-value
+- document
+- column family, and
+- Graph
+
+### Database Use Cases
+
+Databases stores data
+
+Databases tend to support two major categories of data processing:
+
+- Online Transactional Processing (OLTP) and
+- Online Analytical Processing (OLAP).
+
+# **Online Transactional Processing**
+
+- OLTP systems handle the transactions( booking a flight reservation) we encounter every day. OLTP systems balance the ability to write and read data efficiently.
+
+**Normalization**
+
+Normalization is the process to eliminate data redundancy and enhance data integrity in the table. Normalization also helps to organize the data in the database. It is a multi-step process that sets the data into tabular form and removes the duplicated data from the relational tables.
+
+First normal form (1NF) is when every row in a table is unique and every column contains a unique value.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/47b3cc62-54bf-42ab-91cc-f690560c675b/e8dcec2e-8d8b-417e-8ede-86a01b23c29c/Untitled.png)
+
+# **1st Normal Form (1NF)**
+
+- A table is referred to as being in its First Normal Form if atomicity of the table is 1.
+- Here, atomicity states that a single cell cannot hold multiple values. It must hold only a single-valued attribute.
+- The First normal form disallows the multi-valued attribute, composite attribute, and their combinations.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/47b3cc62-54bf-42ab-91cc-f690560c675b/7df52764-dabd-48c2-ba3f-29869d476e9d/Untitled.png)
+
+# **Candidate Key**
+
+A candidate key is a set of one or more columns that can identify a record uniquely in a table, and YOU can use each candidate key as a [Primary Key.](https://www.simplilearn.com/tutorials/sql-tutorial/primary-key-in-sql)
+
+- Primary Key: Putting it simply, it is a column that accepts unique values for each row.
+- 
+
+# **Super Key**
+
+Super key is a set of over one key that can identify a record uniquely in a table, and the Primary Key is a subset of Super Key.
+
+# **2NF (Second Normal Form):**
+
+ Builds on 1NF by We need to remove redundant data from a table that is being applied to multiple rows. and placing them in separate tables. It requires all non-key attributes to be fully functional on the primary key.
+
+# **3NF (Third Normal Form):**
+
+Extends 2NF by ensuring that all non-key attributes are not only fully functional on the primary key but also independent of each other. This eliminates transitive dependency.
+
+# **Online Analytical Processing**
+
+OLAP systems focus on the ability of organizations to analyze data.
+
+- OLAP systems have a denormalized design. Instead of having data distributed across multiple tables, denormalization results in wider tables than those found in an OLTP database.
+
+# **Schema Concepts**
+
+- A data warehouse is a database that aggregates data from many transactional systems for analytical purposes.
+
+# **Dimensionality**
+
+- Dimensionality refers to the number of attributes a table has. The greater the number of attributes, the higher the dimensionality.
+
+## **Handling Dimensionality**
+
+- An understanding of this method is required to write a query to retrieve the current price. Another method extends the snowflake approach to modelling dimensions. You have a product dimension for the current price and a product history table for maintaining price history.
+
+---
+
+# **Data Acquisition Concepts**
+
+## **Integration**
+
+- Data from transactional systems flow into data warehouses and data marts for analysis.
+1. **Extract:** Phase 1 -  extract data from the source system and place it in a staging area. The goal of the extract phase is to move data from a relational database into a flat file as quickly as possible.
+2. **Transform:** Phase 2 transforms the data. The goal is to reformat the data from its transactional structure to the data warehouse's analytical design.
+3. **Load:** The purpose of the load phase is to ensure data gets into the analytical system as quickly as possible.
+
+**ETL Vendors**
+
+- A delta load only moves changes between systems
+
+**Data Collection Methods**
+
+- Augmenting data from your transactional systems with external data is an excellent way to improve the analytical capabilities of your organization.
+
+# NB: I need to go back to chapter 3 module 2
+
+Chapter 4 
+
+## Data Quality
+
+**Duplicate Data**
+
+Duplicate data occurs when data representing the same transaction is accidentally duplicated within a system.
+
+- Example: Unintentionally, you double-click the purchase button. Instead of purchasing one ticket for your upcoming travels, you create two. The first is intentional, whereas the second is a duplicate.
+
+The best way to resolve duplicate data is to prevent its creation in the first place. A common way to stop duplicate data before it gets into a system is a visual warning to alert users. 
+
+ Duplicate resolution process
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/47b3cc62-54bf-42ab-91cc-f690560c675b/f944144b-b680-46c8-888a-31d0fb8e8388/Untitled.png)
+
+## **Redundant Data**
+
+Data redundancy is a function of integrating multiple systems.
+
+- Transactional databases are often in third normal form
+
+## **Missing Values**
+
+Missing values occur when you expect an attribute to contain data but nothing is there.  Missing values are also known as null values. 
+
+- To handle missing values, you first have to check for their existence. SQL offers functions to check for null and functions that can replace a null with a user-specified value. There are similar functions in both Python and R.
+
+## **Invalid Data**
+
+- Invalid data are values outside the valid range for a given attribute.
+
+Example: All of the values in Figure 4.8 belong to their respective data type. Historically, temperatures on Earth are between –140 and 140 degrees Fahrenheit. With this context, it becomes clear that –99,999 is an unrealistic value for temperature. The value is clearly invalid despite being numeric.
+
+### **Nonparametric Data**
+
+Nonparametric data is data collected from categorical variables. Sometimes the categories indicate differentiation, and sometimes they have a rank order associated with them. In this latter case, the rank order of the values is of significance, not the individual values themselves.
+
+- For example, suppose a person has abdominal pain and seeks medical attention. The doctor asks the person to rate their pain on a scale of 0 to 10. Since individuals experience pain differently, the scale in Figure 4.9 helps people put their discomfort in context.
+
+### **Data Outliers**
+
+A data outlier is a value that differs significantly from other observations in a dataset.
+
+- Example: Consider the real estate sale price example in Figure 4.10. All of the properties are on the same street, city, and state. Most of the properties have a sale price between $128,000 and $153,000. However, the property at 130 Main Street has a sale price of $26,496,400. That is a dramatic difference from the rest of the sales prices.
+
+### **Specification Mismatch**
+
+A specification describes the target value for a component. A specification mismatch occurs when an individual component's characteristics are beyond the range of acceptable values. 
+
+- For example, suppose you want to add a room to a house and you buy 15 wooden studs. Looking at the blueprint for the addition, you need wooden studs with a rectangular cross-section measuring 2 inches by 4 inches (2×4). When purchasing the studs, you want to ensure that all 15 have a consistent cross-section.
+
+In manufacturing, a specification mismatch causes a component to fail post-production quality checks. 
+
+Data Invalid vs Specification Mismatch 
+
+- When data is invalid, it has values that fall outside a given range.
+- Specification mismatch occurs when data does not conform to its destination data type.
+
+ For example, you might be loading data from a file into a database. If the destination column is numeric and you have text data, you'll end up with a specification mismatch. To resolve this mismatch, you must validate that the inbound data consistently maps to its target data type.
+
+### **Data Type Validation**
+
+Refers to **checking whether or not an entry matches the field**. For example, you might try entering text in the age field, which should only allow numerical data types. If the user inputs a text in a numerical type field, the algorithm we use may crash or the results will be faulty.
+
+### **Recoding Data**
+
+Recoding data is a technique you can use to map original values for a variable into new values to facilitate analysis. Recoding groups data into multiple categories, creating a categorical variable. A categorical variable is either nominal or ordinal. 
+
+- For example, T-shirt size is an example of an ordinal variable, as sizes come in small, medium, large, and extra-large. Variable values fit into a fixed number of categories, similar to how lookup tables work in Chapter 3. Recoding is helpful when you have numeric data you want to analyze by category.
+
+### **Derived Variables**
+
+- A derived variable is a new variable resulting from a calculation on an existing variable.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/47b3cc62-54bf-42ab-91cc-f690560c675b/b062b631-6805-4090-8cdd-5b1b5267a143/Untitled.png)
+
+### **Data Merge**
+
+A data merge uses a common variable to combine multiple datasets with different structures into a single dataset.
+
+Example: Since a data merge adds columns to a dataset, merging gives you additional data about a specific observation. Imagine you want to get an overall picture of a person's health. To get the data, you obtain records from the person's primary care physician and other medical specialists.
+
+Example 2:  Consider the systems that support a university. When a person applies, the university stores data, including admissions essays, high school transcripts, letters of recommendation, and standardized test scores. Upon becoming a student, a person generates academic data, including course enrollment and grades. Some students have work-study jobs, which create payroll data, including hours worked and hourly rate.
+
+
