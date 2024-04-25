@@ -431,4 +431,25 @@ Example: Since a data merge adds columns to a dataset, merging gives you additio
 
 Example 2:  Consider the systems that support a university. When a person applies, the university stores data, including admissions essays, high school transcripts, letters of recommendation, and standardized test scores. Upon becoming a student, a person generates academic data, including course enrollment and grades. Some students have work-study jobs, which create payroll data, including hours worked and hourly rate.
 
+veral data manipulation tools are available that cater to various data analysis and transformation needs. Here are some widely used tools:
+
+Microsoft Excel: A versatile spreadsheet tool for basic data manipulation and analysis.
+Python: The Pandas library in Python is popular for data manipulation, offering powerful data structures and tools.
+R: R is a statistical programming language with packages like dplyr and tidyr that excel in data manipulation.
+SQL: Structured Query Language manages and manipulates data in relational databases.
+OpenRefine: A tool for cleaning and transforming messy data, handy for data cleaning.
+Apache Spark: An extensive data processing framework that supports data manipulation for large datasets.
+Tableau Prep: A data preparation tool for cleaning, shaping, and enriching data before analysis in Tableau.
+
+## Data Manipulation
+
+Several data manipulation tools are available that cater to various data analysis and transformation needs. Here are some widely used tools:
+
+1. **Microsoft Excel**: A versatile spreadsheet tool for basic data manipulation and analysis.
+2. **Python**: The Pandas library in Python is popular for data manipulation, offering powerful data structures and tools.
+3. **R**: R is a statistical programming language with packages like dplyr and tidyr that excel in data manipulation.
+4. **SQL**: Structured Query Language manages and manipulates data in relational databases.
+5. **OpenRefine**: A tool for cleaning and transforming messy data, handy for data cleaning.
+6. **Apache Spark**: An extensive data processing framework that supports data manipulation for large datasets.
+7. **Tableau Prep**: A data preparation tool for cleaning, shaping, and enriching data before analysis in Tableau.
 
