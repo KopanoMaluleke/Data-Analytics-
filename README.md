@@ -453,3 +453,5 @@ Several data manipulation tools are available that cater to various data analysi
 6. **Apache Spark**: An extensive data processing framework that supports data manipulation for large datasets.
 7. **Tableau Prep**: A data preparation tool for cleaning, shaping, and enriching data before analysis in Tableau.
 
+8. As you identify requirements, make sure that you understand the limitations of the data or its use. If someone wants to look at 10 years’ worth of data but you only have data for seven years, you need to communicate that shortcoming and work with the business user to determine a viable path forward. Similarly, some circumstances require you to restrict access to specific data elements. Take data sensitivity into account as you consider distribution options.
+
